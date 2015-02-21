@@ -27,11 +27,21 @@
       <file leaf-file-name="sqli.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqli.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.57894737" vertical-offset="1491" max-vertical-offset="1890">
-              <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.63909775" vertical-offset="840" max-vertical-offset="1965">
+              <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
               <folding>
                 <element signature="e#148#175#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ignored.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ignored.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,6 +73,7 @@
       <list>
         <option value="$PROJECT_DIR$/adv_dict.py" />
         <option value="$PROJECT_DIR$/db_struct.py" />
+        <option value="$PROJECT_DIR$/ignored.py" />
         <option value="$PROJECT_DIR$/sqli.py" />
       </list>
     </option>
@@ -363,10 +374,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ignored.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sqli.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.57894737" vertical-offset="1491" max-vertical-offset="1890">
-          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.63909775" vertical-offset="840" max-vertical-offset="1965">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
           <folding>
             <element signature="e#148#175#0" expanded="true" />
           </folding>

