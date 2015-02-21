@@ -121,9 +121,10 @@ if __name__ == '__main__':
         print(filename)
         with open(filename, 'w') as fp:
             for c in col_names:
-                fp.writelines(c.database + ' => ' + c.name)
-                fp.writelines(c.content)
-                fp.writelines('')
+                fp.writelines(c.database + ' => ' + c.name + '\r\n')
+                for v in c.content:
+                    fp.write(v + ' || ')
+                fp.writelines('\r\n')
         print('Writing complete.')
     except Exception, e:
         print('AN ERROR OCCURRED..')
